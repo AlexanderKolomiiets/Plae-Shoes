@@ -23,23 +23,28 @@
           <p class="header__subtitle">
             goplae.co.uk is coming soon but in the meantime check out this page  and sign up to our newsletter for more information
           </p>
-          <div class="header__sign-up sign-up">
+          <form action="#" class="header__sign-up sign-up">
             <input
               type="email"
               class="sign-up__input"
               placeholder="Enter email address"
+              required
             >
             </input>
-            <p class="sign-up__button" title="Sign up">
+            <button
+              type="submit"
+              class="sign-up__button"
+              title="Sign up"
+            >
               Sign Up
-            </p>
-          </div>
+            </button>
+          </form>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="about page_section container">
+      <section class="about page__section container">
         <div class="about__content">
           <div class="about__info">
             <h2 class="about__title">About Plae</h2>
@@ -60,7 +65,7 @@
           >
         </div>
       </section>
-      <section class="customers page_section container">
+      <section class="customers page__section container">
         <div class="customers__content">
           <img
             src="./images/customers.png"
@@ -78,7 +83,7 @@
           </div>
         </div>
       </section>
-      <section class="customers page_section container">
+      <section class="customers page__section container">
         <div class="customers__content">
           <div class="customers__info">
             <p class="customers__description quotes">
@@ -95,7 +100,25 @@
           >
         </div>
       </section>
-      <section class="features">
+      <section class="range page__section">
+        <h2 class="range__title">
+          The Range
+        </h2>
+        <p class="range__subtitle">
+          View the styles available now from select stockists
+        </p>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <img src="./images/range.png" class="swiper-slide">
+            <img src="./images/range.png" class="swiper-slide">
+            <img src="./images/range.png" class="swiper-slide">
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </section>
+      <section class="features page__section">
         <div class="features__content container">
           <h2 class="features__title">
             Why Plae ?
@@ -104,7 +127,7 @@
             Some of the features that make Plae shoes so good for kids
           </p>
           <ul class="features__list">
-            <div class="features__list__container">
+            <div class="features__list__container features__list__container--1">
               <li class="features__item">
                 <p class="features__name">
                   Pull Tab
@@ -138,7 +161,7 @@
                 </p>
               </li>
             </div>
-            <div class="features__list__container">
+            <div class="features__list__container features__list__container--2">
               <li class="features__item">
                 <p class="features__name">
                   Machine Washable*
@@ -183,7 +206,7 @@
           </ul>
         </div>
       </section>
-      <section class="stockists container">
+      <section class="stockists page__section container">
         <div class="stockists__content">
           <h2 class="stockists__title">
             Where can you find us ?
@@ -192,306 +215,6 @@
             See below our UK stockist list
           </p>
           <ul class="stockists__list">
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
-            <li class="stockists__item">
-              <p class="stockists__name">
-                Best Foot Forward
-              </p>
-              <p class="stockists__address">
-                76 Liverpool Road<br>
-                Preston<br>
-                PR1 0QD
-                <a href="tel:+02089697565" class="stockists__phone">
-                  0208 969 7565
-                </a>
-                <a
-                  href="/"
-                  class="stockists__link"
-                  target="_blank"
-                >
-                  bestfootforward.co.uk
-                </a>
-              </p>
-            </li>
           </ul>
           <h2 class="stockists__title">
             Like to stock Plae?
@@ -509,7 +232,7 @@
           </div>
         </div>
       </section>
-      <footer class="footer">
+      <footer class="footer page__section">
         <div class="footer__content">
           <h2 class="footer__title">
             Be the first to see goplae.co.uk
@@ -517,23 +240,28 @@
           <p class="footer__subtitle">
             Sign Up for the latest news
           </p>
-          <div class="footer__sign-up sign-up">
+          <form action="#" class="footer__sign-up sign-up">
             <input
               type="email"
               class="sign-up__input"
               placeholder="Enter email address"
+              required
             >
             </input>
-            <p class="sign-up__button" title="Sign up">
+            <button
+              type="submit"
+              class="sign-up__button"
+              title="Sign up"
+            >
               Sign Up
-            </p>
-          </div>
+            </button>
+          </form>
         </div>
         <div class="footer__copyright">
           Copyright © 2015 Craftymothers ltd. All Rights Reserved
         </div>
       </footer>
     </main>
-    <script type="text/javascript" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
