@@ -1,0 +1,51 @@
+.customers {
+  &__content {
+    @extend %grid-two-columns;
+  }
+
+  &__title {
+    @extend %title;
+
+    margin-bottom: 124px;
+  }
+
+  &__description {
+    @extend %subtitle;
+
+    position: relative;
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 0 16px;
+    line-height: 30px;
+    margin-bottom: 100px;
+
+    &:nth-of-type(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__photo {
+    max-width: 100%;
+  }
+
+  &__info {
+    padding: 100px;
+  }
+}
+
+.quotes {
+  &::before {
+    content: url('./../images/open-quote.png');
+    position: absolute;
+    top: -50px;
+    left: 0;
+  }
+
+  &::after {
+    content: url('./../images/close-quote.png');
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+  }
+}
+

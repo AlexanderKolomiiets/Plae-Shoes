@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+.page {
+  &__body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+}

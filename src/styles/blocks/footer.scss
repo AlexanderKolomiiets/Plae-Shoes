@@ -1,0 +1,30 @@
+.footer {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $grey-color;
+    padding: 135px 0 115px;
+  }
+
+  &__title {
+    @extend %title;
+
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+
+    margin: 0 auto 48px;
+  }
+
+  &__copyright {
+    font-family: "Yantramanav", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+    padding: 12px 0 12px 36px ;
+    background-color: #dcdcdc;
+  }
+}

@@ -1,0 +1,65 @@
+.stockists {
+  &__title {
+    @extend %title;
+
+    margin-top: 80px;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+
+    margin: 0 auto 80px;
+
+    &:nth-of-type(2) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    justify-content: center;
+    gap: 80px;
+    padding: 0 32px;
+    list-style: none;
+    font-family: "Yantramanav", sans-serif;
+    margin-bottom: 96px;
+  }
+
+  &__phone {
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 12px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $green-color;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #80db80;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: center;
+    gap: 108px;
+    font-family: "Yantramanav";
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 78px;
+  }
+}
