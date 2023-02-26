@@ -35,17 +35,16 @@
 
 .quotes {
   &::before {
-    content: url('./../images/open-quote.png');
+    content: url("./../images/open-quote.png");
     position: absolute;
     top: -50px;
     left: 0;
   }
 
   &::after {
-    content: url('./../images/close-quote.png');
+    content: url("./../images/close-quote.png");
     position: absolute;
     bottom: -50px;
     right: 0;
   }
 }
-
