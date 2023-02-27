@@ -6,6 +6,7 @@
     height: 100vh;
     padding: 35px;
     background-image: url("./../images/header.png");
+    background-position: center;
     background-size: cover;
   }
 
@@ -26,9 +27,13 @@
   &__title {
     margin-bottom: 28px;
     font-family: "Nunito", sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 400;
     color: #fff;
+
+    @include onTablet {
+      font-size: 60px;
+    }
   }
 
   &__subtitle {

@@ -20,11 +20,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 150px);
     justify-content: center;
-    gap: 80px;
+    gap: 84px;
     padding: 0 32px;
+    margin-bottom: 96px;
     list-style: none;
     font-family: "Yantramanav", sans-serif;
-    margin-bottom: 96px;
   }
 
   &__phone {
@@ -56,10 +56,16 @@
   &__contacts {
     display: flex;
     justify-content: center;
-    gap: 108px;
+    gap: 60px;
+    padding: 0 40px;
     font-family: "Yantramanav", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     margin-bottom: 78px;
+
+    @include onTablet {
+      gap: 108px;
+      font-size: 18px;
+    }
   }
 }

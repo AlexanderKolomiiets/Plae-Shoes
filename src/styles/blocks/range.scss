@@ -17,21 +17,44 @@
 }
 
 .swiper {
-  @extend %subtitle;
+  max-width: 265px;
 
-  max-width: 465px;
+  @include onTablet {
+    max-width: 465px;
+  }
 
-  &-wrapper {
-    padding-bottom: 200px;
+  &__pagination {
+    margin-top: 10px;
+    @extend %subtitle;
+  }
+
+  &__image {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include onTablet {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__title {
+    @extend %title;
   }
 
   &-button-prev,
   &-button-next {
-    font-weight: bold;
+    margin: 20px;
     padding: 16px;
+    font-weight: bold;
     border-radius: 20px;
-    border: 2px solid #dcdcdc;
+    border: 2px solid $grey-color;
     --swiper-theme-color: #dcdcdc;
     --swiper-navigation-size: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      --swiper-theme-color: #8c8c8c;
+      border-color: #8c8c8c;
+    }
   }
 }

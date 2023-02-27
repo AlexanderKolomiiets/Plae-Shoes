@@ -3,5 +3,8 @@ module.exports = {
   "parserOptions": {
     "sourceType": "module",
     "allowImportExportEverywhere": true
-  }
+  },
+  rules: {
+    'no-new': 'off'
+  },
 };

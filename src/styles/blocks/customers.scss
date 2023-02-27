@@ -1,12 +1,19 @@
 .customers {
   &__content {
-    @extend %grid-two-columns;
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
   }
 
   &__title {
     @extend %title;
+    margin-bottom: 40px;
 
-    margin-bottom: 124px;
+    @include onTablet {
+      margin-bottom: 124px;
+    }
   }
 
   &__description {
@@ -16,8 +23,13 @@
     margin: 0 auto;
     max-width: 320px;
     padding: 0 16px;
-    line-height: 30px;
-    margin-bottom: 100px;
+    line-height: 24px;
+    margin-bottom: 30px;
+
+    @include onTablet {
+      line-height: 30px;
+      margin-bottom: 100px;
+    }
 
     &:nth-of-type(2) {
       margin-bottom: 0;
@@ -25,11 +37,19 @@
   }
 
   &__photo {
-    max-width: 100%;
+    display: none;
+    @include onTablet {
+      display: block;
+      max-width: 100%;
+    }
   }
 
   &__info {
-    padding: 100px;
+    padding: 30px 40px;
+
+    @include onTablet {
+      padding: 100px;
+    }
   }
 }
 
@@ -37,14 +57,24 @@
   &::before {
     content: url("./../images/open-quote.png");
     position: absolute;
-    top: -50px;
-    left: 0;
+    top: -20px;
+    left: -20px;
+
+    @include onTablet {
+      top: -50px;
+      left: 0;
+    }
   }
 
   &::after {
     content: url("./../images/close-quote.png");
     position: absolute;
-    bottom: -50px;
-    right: 0;
+    bottom: -20px;
+    right: -20px;
+
+    @include onTablet {
+      bottom: -50px;
+      right: 0;
+    }
   }
 }

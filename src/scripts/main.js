@@ -1,7 +1,6 @@
 import Swiper, { Pagination, Navigation } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 
-// eslint-disable-next-line no-new
 new Swiper('.swiper', {
   modules: [Pagination, Navigation],
 
@@ -9,7 +8,7 @@ new Swiper('.swiper', {
   rewind: true,
 
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper__pagination',
     type: 'fraction',
   },
 
@@ -28,32 +27,14 @@ forms.forEach(form => {
   });
 });
 
-const list = document.querySelector('.stockists__list');
-let items = '';
+const tabs = document.querySelectorAll('.nav__link');
 
-for (let i = 0; i < 15; i++) {
-  items += `
-  <li class="stockists__item">
-    <p class="stockists__name">
-      Best Foot Forward
-    </p>
-    <p class="stockists__address">
-      76 Liverpool Road<br>
-      Preston<br>
-      PR1 0QD
-      <a href="tel:+02089697565" class="stockists__phone">
-        0208 969 7565
-      </a>
-      <a
-        href="/"
-        class="stockists__link"
-        target="_blank"
-      >
-        bestfootforward.co.uk
-      </a>
-    </p>
-  </li>
-  `;
-}
+tabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(link => {
+      link.classList.remove('nav__link--is-active');
+    });
 
-list.insertAdjacentHTML('afterbegin', items);
+    tabs[i].classList.add('nav__link--is-active');
+  });
+});
