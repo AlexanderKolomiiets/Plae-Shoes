@@ -13,10 +13,8 @@ new Swiper('.swiper', {
     el: '.swiper__pagination',
     type: 'custom',
     renderCustom: function(swiper, current, total) {
-      return '<h2 class="swiper__title">' + titles[current - 1] + '</h2>'
-      + `<span>${current}</span>`
-      + ' / '
-      + `<span>${total}</span>`;
+      return `<h2 class="swiper__title">${titles[current - 1]}</h2>
+      <span>${current}</span>  /  <span>${total}</span>`;
     },
   },
 
@@ -35,14 +33,56 @@ forms.forEach(form => {
   });
 });
 
-const tabs = document.querySelectorAll('.nav__link');
+const scrollHandler = () => {
+  const nav = document.querySelector('.nav');
 
-tabs.forEach((tab, i) => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(link => {
-      link.classList.remove('nav__link--is-active');
-    });
+  const header = document.querySelector('#header');
+  const about = document.querySelector('#about');
+  const customers = document.querySelector('#customers');
+  const customers2 = document.querySelector('#customers-2');
+  const range = document.querySelector('#range');
+  const features = document.querySelector('#features');
+  const stockists = document.querySelector('#stockists');
 
-    tabs[i].classList.add('nav__link--is-active');
+  const posNav = window.pageYOffset + nav.offsetHeight;
+
+  const posHeader = header.offsetTop + header.offsetHeight;
+  const posAbout = about.offsetTop + about.offsetHeight;
+  const posCustomers = customers.offsetTop + customers.offsetHeight;
+  const posCustomers2 = customers2.offsetTop + customers2.offsetHeight;
+  const posRange = range.offsetTop + range.offsetHeight;
+  const posFeatures = features.offsetTop + features.offsetHeight;
+  const posStockists = stockists.offsetTop + stockists.offsetHeight;
+
+  const distHeader = posHeader - posNav;
+  const distAbout = posAbout - posNav;
+  const distCustomers = posCustomers - posNav;
+  const distCustomers2 = posCustomers2 - posNav;
+  const distsRange = posRange - posNav;
+  const distFeatures = posFeatures - posNav;
+  const distStockists = posStockists - posNav;
+
+  const distArray = [
+    distHeader,
+    distAbout,
+    distCustomers,
+    distCustomers2,
+    distsRange,
+    distFeatures,
+    distStockists,
+  ];
+
+  const min = Math.min(...distArray.filter(num => num > 0));
+
+  document.querySelectorAll('.nav__link')
+    .forEach(link => link.classList.remove('nav__link--is-active'));
+
+  distArray.forEach((item, i) => {
+    if (min === item) {
+      document.querySelectorAll('.nav__link')[i]
+        .classList.add('nav__link--is-active');
+    }
   });
-});
+};
+
+window.addEventListener('scroll', scrollHandler);

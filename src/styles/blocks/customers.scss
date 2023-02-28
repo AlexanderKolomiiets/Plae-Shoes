@@ -1,5 +1,8 @@
 .customers {
   &__content {
+    display: flex;
+    flex-direction: column;
+
     @include onTablet {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -12,7 +15,7 @@
     margin-bottom: 40px;
 
     @include onTablet {
-      margin-bottom: 124px;
+      margin-bottom: 115px;
     }
   }
 
@@ -21,26 +24,40 @@
 
     position: relative;
     margin: 0 auto;
-    max-width: 320px;
+    max-width: 380px;
     padding: 0 16px;
     line-height: 24px;
     margin-bottom: 30px;
 
     @include onTablet {
+      margin-left: 5px;
       line-height: 30px;
-      margin-bottom: 100px;
+      margin-bottom: 90px;
     }
 
     &:nth-of-type(2) {
+      margin-left: -15px;
+      font-size: 17px;
       margin-bottom: 0;
     }
   }
 
   &__photo {
-    display: none;
+    margin: 0 auto;
+    max-width: 70%;
+
+    &:nth-child(1) {
+      order: 1;
+      margin-bottom: 30px;
+    }
+
     @include onTablet {
-      display: block;
       max-width: 100%;
+
+      &:nth-child(1) {
+        order: 0;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -48,7 +65,13 @@
     padding: 30px 40px;
 
     @include onTablet {
-      padding: 100px;
+      padding: 20% 21% 18% 22%;
+    }
+
+    &--2 {
+      @include onTablet {
+        padding: 33% 25% 18%;
+      }
     }
   }
 }
@@ -61,8 +84,8 @@
     left: -20px;
 
     @include onTablet {
-      top: -50px;
-      left: 0;
+      top: -46px;
+      left: 5px;
     }
   }
 
@@ -73,8 +96,24 @@
     right: -20px;
 
     @include onTablet {
-      bottom: -50px;
-      right: 0;
+      bottom: -20px;
+      right: 2px;
+    }
+  }
+
+  &--2 {
+    &::before {
+      @include onTablet {
+        top: -46px;
+        left: -20px;
+      }
+    }
+
+    &::after {
+      @include onTablet {
+        bottom: -20px;
+        right: -17px;
+      }
     }
   }
 }

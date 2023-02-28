@@ -3,24 +3,43 @@
   margin: 0 auto;
   max-width: 860px;
 
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
   &__title {
     @extend %title;
 
-    margin: 84px 0 12px;
+    margin: 75px 0 15px;
+
+    @include onTablet {
+      margin-left: 28px;
+    }
   }
 
   &__subtitle {
     @extend %subtitle;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    margin-bottom: 22px;
 
-    margin-bottom: 136px;
+    @include onTablet {
+      margin-left: 28px;
+    }
   }
 }
 
 .swiper {
   max-width: 300px;
+  position: relative;
 
   @include onTablet {
     max-width: 465px;
+  }
+
+  &-wrapper {
+    align-items: center;
   }
 
   &__pagination {
@@ -30,22 +49,19 @@
   &__title {
     @extend %title;
 
+    font-size: 24px;
     margin-bottom: 20px;
-    
-    @include onTablet {
-      margin-bottom: 38px;
-    }
+
   }
 
   &-button-prev,
   &-button-next {
-    margin: 20px;
-    padding: 16px;
+    padding: 18px;
     font-weight: bold;
     border-radius: 20px;
     border: 2px solid $grey-color;
     --swiper-theme-color: #dcdcdc;
-    --swiper-navigation-size: 10px;
+    --swiper-navigation-size: 12px;
     transition: 0.3s;
 
     &:hover {

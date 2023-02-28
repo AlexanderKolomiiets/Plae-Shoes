@@ -1,5 +1,6 @@
 .sign-up {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 38px;
 
@@ -8,11 +9,13 @@
   }
 
   &__input {
+    width: 65%;
     height: inherit;
-    padding: 0 10px 0 25px;
+    padding: 0 10px 0 15px;
     font-family: "Yantramanav", sans-serif;
     font-size: 14px;
     font-weight: 300;
+    letter-spacing: 0.5px;
     outline: none;
     border: none;
     border-radius: 80px 0 0 80px;
@@ -20,7 +23,7 @@
 
     @include onTablet {
       font-size: 18px;
-      padding: 0 100px 0 35px;
+      padding: 0 107px 0 20px;
     }
   }
 
@@ -30,12 +33,12 @@
     height: inherit;
     padding: 0 25px 0 15px;
     font-family: "Nunito", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     border-radius: 0 80px 80px 0;
     background: $green-color;
     color: #fff;
-    transition: color 0.3s;
+    transition: 0.3s;
     border: none;
     cursor: pointer;
 
@@ -46,6 +49,7 @@
   }
 
   &__button:hover {
+    background: green;
     color: gainsboro;
   }
 }

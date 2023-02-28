@@ -4,6 +4,10 @@
   text-align: center;
 
   @include onTablet {
+    font-size: 26px;
+  }
+
+  @include onDesktop {
     font-size: 30px;
   }
 }
@@ -11,10 +15,15 @@
 %subtitle {
   font-family: "Yantramanav", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
+  letter-spacing: 1px;
 
   @include onTablet {
+    font-size: 18px;
+  }
+
+  @include onDesktop {
     font-size: 20px;
   }
 }
