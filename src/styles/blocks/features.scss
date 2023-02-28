@@ -49,28 +49,28 @@
       @include onDesktop {
         &--1 .features__item {
           &:nth-child(1)::after {
-            content: url('./../images/svg/feature-1.svg');
+            content: url("./../images/svg/feature-1.svg");
             position: absolute;
             top: 30px;
             right: -70px;
           }
 
           &:nth-child(2)::after {
-            content: url('./../images/svg/feature-2.svg');
+            content: url("./../images/svg/feature-2.svg");
             position: absolute;
             bottom: 40px;
             right: -90px;
           }
 
           &:nth-child(3)::after {
-            content: url('./../images/svg/feature-2.svg');
+            content: url("./../images/svg/feature-2.svg");
             position: absolute;
             top: 10px;
             right: -110px;
           }
 
           &:nth-child(4)::after {
-            content: url('./../images/svg/feature-4.svg');
+            content: url("./../images/svg/feature-4.svg");
             position: absolute;
             top: -40px;
             right: -230px;
@@ -79,35 +79,35 @@
 
         &--2 .features__item {
           &:nth-child(1)::after {
-            content: url('./../images/svg/feature-5.svg');
+            content: url("./../images/svg/feature-5.svg");
             position: absolute;
             top: 40px;
             left: -280px;
           }
 
           &:nth-child(2)::after {
-            content: url('./../images/svg/feature-5.svg');
+            content: url("./../images/svg/feature-5.svg");
             position: absolute;
             top: 50px;
             left: -250px;
           }
 
           &:nth-child(3)::after {
-            content: url('./../images/svg/feature-7.svg');
+            content: url("./../images/svg/feature-7.svg");
             position: absolute;
             top: 20px;
             left: -90px;
           }
 
           &:nth-child(4)::after {
-            content: url('./../images/svg/feature-8.svg');
+            content: url("./../images/svg/feature-8.svg");
             position: absolute;
             top: -40px;
             left: -180px;
           }
 
           &:nth-child(5)::after {
-            content: url('./../images/svg/feature-9.svg');
+            content: url("./../images/svg/feature-9.svg");
             position: absolute;
             top: -10px;
             left: -350px;

@@ -17,28 +17,24 @@
 }
 
 .swiper {
-  max-width: 265px;
+  max-width: 300px;
 
   @include onTablet {
     max-width: 465px;
   }
 
   &__pagination {
-    margin-top: 10px;
     @extend %subtitle;
-  }
-
-  &__image {
-    width: 100%;
-    margin-bottom: 30px;
-
-    @include onTablet {
-      margin-bottom: 120px;
-    }
   }
 
   &__title {
     @extend %title;
+
+    margin-bottom: 20px;
+    
+    @include onTablet {
+      margin-bottom: 38px;
+    }
   }
 
   &-button-prev,

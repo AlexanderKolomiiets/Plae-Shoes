@@ -1,6 +1,8 @@
 import Swiper, { Pagination, Navigation } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 
+const titles = ['TY', 'MAX', 'EMME', 'CAMILLE', 'NOEL', 'ROAN', 'NAT'];
+
 new Swiper('.swiper', {
   modules: [Pagination, Navigation],
 
@@ -9,7 +11,13 @@ new Swiper('.swiper', {
 
   pagination: {
     el: '.swiper__pagination',
-    type: 'fraction',
+    type: 'custom',
+    renderCustom: function(swiper, current, total) {
+      return '<h2 class="swiper__title">' + titles[current - 1] + '</h2>'
+      + `<span>${current}</span>`
+      + ' / '
+      + `<span>${total}</span>`;
+    },
   },
 
   navigation: {
