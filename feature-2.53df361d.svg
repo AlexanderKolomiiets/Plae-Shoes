@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="23" viewBox="0 0 108 23">
+<g>
+<g opacity=".5">
+<path fill="#20ab50" d="M96.5 0C102.851 0 108 5.15 108 11.5S102.851 23 96.5 23 85 17.851 85 11.5 90.149 0 96.5 0z"/>
+</g>
+<g>
+<path fill="#fff" d="M96.5 4a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15z"/>
+</g>
+<g>
+<path fill="#fff" d="M92 11v1H0v-1z"/>
+</g>
+</g>
+</svg>
