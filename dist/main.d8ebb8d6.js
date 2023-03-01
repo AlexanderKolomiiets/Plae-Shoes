@@ -11532,7 +11532,7 @@ var scrollHandler = function scrollHandler() {
   var range = document.querySelector('#range');
   var features = document.querySelector('#features');
   var stockists = document.querySelector('#stockists');
-  var posNav = window.pageYOffset + nav.offsetHeight;
+  var posNav = window.pageYOffset + nav.offsetTop;
   var posHeader = header.offsetTop + header.offsetHeight;
   var posAbout = about.offsetTop + about.offsetHeight;
   var posCustomers = customers.offsetTop + customers.offsetHeight;
@@ -11590,7 +11590,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49760" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52719" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

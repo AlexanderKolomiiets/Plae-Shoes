@@ -44,7 +44,7 @@ const scrollHandler = () => {
   const features = document.querySelector('#features');
   const stockists = document.querySelector('#stockists');
 
-  const posNav = window.pageYOffset + nav.offsetHeight;
+  const posNav = window.pageYOffset + nav.offsetTop;
 
   const posHeader = header.offsetTop + header.offsetHeight;
   const posAbout = about.offsetTop + about.offsetHeight;

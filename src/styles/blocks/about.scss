@@ -35,6 +35,7 @@
   }
 
   &__photo {
+    display: flex;
     margin: 0 auto;
     max-width: 80%;
     @include onTablet {

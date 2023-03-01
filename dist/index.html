@@ -10,7 +10,7 @@
     <header class="header page__section" id="header">
       <div class="header__content">
         <a href="#" class="header__logo">
-          <img src="/plae_logo.fa7fbf5d.png" alt="Plae logo" class="header__logo-image">
+          <img src="/plae_logo.fa7fbf5d.png" alt="Plae logo" loading="lazy" class="header__logo-image">
         </a>
         <div class="header__info">
           <h1 class="header__title">
@@ -70,12 +70,20 @@
               With every shoe, Plae sources responsible, recycled, and non-toxic materials, and makes sure manufacturing and labour is fair and child-free.
             </p>
           </div>
-          <img src="/about.32a5dd7a.jpg" alt="about image" class="about__photo">
+          <picture>
+            <source srcset="/about.fd9706f9.webp" type="image/webp">
+            <source srcset="/about.32a5dd7a.jpg" type="image/jpeg">
+            <img src="/about.32a5dd7a.jpg" alt="about image" loading="lazy" class="about__photo">
+          </picture>
         </div>
       </section>
       <section class="customers page__section container" id="customers">
         <div class="customers__content">
-          <img src="/customers.d2daf255.jpg" alt="customers image" class="customers__photo">
+          <picture class="customers__photo">
+            <source srcset="/customers.def16566.webp" type="image/webp">
+            <source srcset="/customers.d2daf255.jpg" type="image/jpeg">
+            <img src="/customers.d2daf255.jpg" alt="customers image" loading="lazy" class="customers__photo">
+          </picture>
           <div class="customers__info">
             <h2 class="customers__title">What our customers say</h2>
             <p class="customers__description quotes">
@@ -97,7 +105,11 @@
               Edie (age 6)
             </p>
           </div>
-          <img src="/customers_2.65f21b84.jpg" alt="customers image" class="customers__photo">
+          <picture class="customers__photo">
+            <source srcset="/customers_2.f5530608.webp" type="image/webp">
+            <source srcset="/customers_2.65f21b84.jpg" type="image/jpeg">
+            <img src="/customers_2.65f21b84.jpg" alt="customers image" loading="lazy" class="customers__photo">
+          </picture>
         </div>
       </section>
       <section class="range page__section" id="range">
@@ -110,13 +122,41 @@
         <div class="range__content">
           <div class="swiper">
             <div class="swiper-wrapper">
-              <img src="/Ty_N_Steel.b845d2de.jpg" alt="Ty N Steel" class="swiper-slide">
-              <img src="/Max_N_Steel_Camo.d652269e.jpg" alt="Max N Steel Camo" class="swiper-slide">
-              <img src="/Emme_S_Pink.ceb0334d.jpg" alt="Emme S Pink" class="swiper-slide">
-              <img src="/Camile_Navy_3Quarter.06bec771.jpg" alt="Camile Navy 3Quarter" class="swiper-slide">
-              <img src="/Noel_Bracken.9718ef52.jpg" alt="Noel Bracken" class="swiper-slide">
-              <img src="/Roan_L_White.9afa6afe.jpg" alt="Roan L White" class="swiper-slide">
-              <img src="/Nat_Navy.42850694.jpg" alt="Nat Navy" class="swiper-slide">
+              <picture class="swiper-slide">
+                <source srcset="/Ty_N_Steel.67c0660e.webp" type="image/webp">
+                <source srcset="/Ty_N_Steel.b845d2de.jpg" type="image/jpeg">
+                <img src="/Ty_N_Steel.b845d2de.jpg" alt="Ty N Steel" loading="lazy" class="swiper-slide">
+              </picture>
+              <picture class="swiper-slide">
+                <source srcset="/Max_N_Steel_Camo.10b140b2.webp" type="image/webp">
+                <source srcset="/Max_N_Steel_Camo.d652269e.jpg" type="image/jpeg">
+                <img src="/Max_N_Steel_Camo.d652269e.jpg" alt="Max N Steel Camo" loading="lazy" class="swiper-slide">
+              </picture>
+              <picture class="swiper-slide">
+                <source srcset="/Emme_S_Pink.4b1c06cc.webp" type="image/webp">
+                <source srcset="/Emme_S_Pink.ceb0334d.jpg" type="image/jpeg">
+                <img src="/Emme_S_Pink.ceb0334d.jpg" alt="Emme S Pink" loading="lazy" class="swiper-slide">
+              </picture>
+              <picture class="swiper-slide">
+                <source srcset="/Camile_Navy_3Quarter.6e80102d.webp" type="image/webp">
+                <source srcset="/Camile_Navy_3Quarter.06bec771.jpg" type="image/jpeg">
+                <img src="/Camile_Navy_3Quarter.06bec771.jpg" alt="Camile Navy 3Quarter" loading="lazy" class="swiper-slide">
+              </picture>
+              <picture class="swiper-slide">
+                <source srcset="/Noel_Bracken.ace9e479.webp" type="image/webp">
+                <source srcset="/Noel_Bracken.9718ef52.jpg" type="image/jpeg">
+                <img src="/Noel_Bracken.9718ef52.jpg" alt="Noel Bracken" loading="lazy" class="swiper-slide">
+              </picture>
+              <picture class="swiper-slide">
+                <source srcset="/Roan_L_White.b6a12ff4.webp" type="image/webp">
+                <source srcset="/Roan_L_White.9afa6afe.jpg" type="image/jpeg">
+                <img src="/Roan_L_White.9afa6afe.jpg" alt="Roan L White" loading="lazy" class="swiper-slide">
+              </picture>
+              <picture class="swiper-slide">
+                <source srcset="/Nat_Navy.bb40732a.webp" type="image/webp">
+                <source srcset="/Nat_Navy.42850694.jpg" type="image/jpeg">
+                <img src="/Nat_Navy.42850694.jpg" alt="Nat Navy" loading="lazy" class="swiper-slide">
+              </picture>
             </div>
             <div class="swiper__pagination"></div>
           </div>
@@ -492,27 +532,27 @@
           </div>
         </div>
       </section>
-      <footer class="footer page__section">
-        <div class="footer__content">
-          <h2 class="footer__title">
-            Be the first to see goplae.co.uk
-          </h2>
-          <p class="footer__subtitle">
-            Sign Up for the latest news
-          </p>
-          <form action="#" class="footer__sign-up sign-up">
-            <input type="email" class="sign-up__input footer__sign-up__input" placeholder="Enter email address" required="">
-            
-            <button type="submit" class="sign-up__button" title="Sign up">
-              Sign Up
-            </button>
-          </form>
-        </div>
-        <div class="footer__copyright">
-          Copyright © 2015 Craftymothers ltd. All Rights Reserved
-        </div>
-      </footer>
     </main>
+    <footer class="footer page__section">
+      <div class="footer__content">
+        <h2 class="footer__title">
+          Be the first to see goplae.co.uk
+        </h2>
+        <p class="footer__subtitle">
+          Sign Up for the latest news
+        </p>
+        <form action="#" class="footer__sign-up sign-up">
+          <input type="email" class="sign-up__input footer__sign-up__input" placeholder="Enter email address" required="">
+          
+          <button type="submit" class="sign-up__button" title="Sign up">
+            Sign Up
+          </button>
+        </form>
+      </div>
+      <div class="footer__copyright">
+        Copyright © 2015 Craftymothers ltd. All Rights Reserved
+      </div>
+    </footer>
     <script src="/main.d8ebb8d6.js"></script>
   </body>
 </html>
