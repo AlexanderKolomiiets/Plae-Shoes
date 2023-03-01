@@ -8,6 +8,8 @@ const scrollHandler = () => {
     distArray.push(section.offsetTop + section.offsetHeight - posNav);
   });
 
+  distArray.pop();
+
   const min = Math.min(...distArray.filter(num => num > 0));
 
   document.querySelectorAll('.nav__link')
