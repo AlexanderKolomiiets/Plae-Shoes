@@ -184,12 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel/src/builtins/bundle-url.js"}],"styles/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\fonts\\Yantramanav-Regular.woff2":[["Yantramanav-Regular.60d438cf.woff2","fonts/Yantramanav-Regular.woff2"],"fonts/Yantramanav-Regular.woff2"],"./..\\fonts\\Yantramanav-Light.woff2":[["Yantramanav-Light.20f47f95.woff2","fonts/Yantramanav-Light.woff2"],"fonts/Yantramanav-Light.woff2"],"./..\\fonts\\Nunito-Regular.woff2":[["Nunito-Regular.5d9867f2.woff2","fonts/Nunito-Regular.woff2"],"fonts/Nunito-Regular.woff2"],"./..\\fonts\\Nunito-Light.woff2":[["Nunito-Light.7c3dd789.woff2","fonts/Nunito-Light.woff2"],"fonts/Nunito-Light.woff2"],"./..\\images\\header.jpg":[["header.3dc29cd7.jpg","images/header.jpg"],"images/header.jpg"],"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel/src/builtins/bundle-url.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58565" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59075" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -394,4 +389,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.48b3db1d.js.map
+//# sourceMappingURL=/index.js.map
