@@ -54,6 +54,9 @@ p {
 * {
   box-sizing: border-box; }
 
+body {
+  overflow-x: hidden; }
+
 .page {
   scroll-behavior: smooth; }
   .page__body {
@@ -205,6 +208,7 @@ p {
       text-align: start; } }
 
 .about__photo {
+  display: flex;
   margin: 0 auto;
   max-width: 80%; }
   @media (min-width: 768px) {
@@ -254,6 +258,7 @@ p {
     margin-bottom: 0; }
 
 .customers__photo {
+  display: flex;
   margin: 0 auto;
   max-width: 70%; }
   .customers__photo:nth-child(1) {
