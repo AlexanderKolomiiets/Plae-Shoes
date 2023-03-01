@@ -11462,6 +11462,7 @@ var scrollHandler = function scrollHandler() {
   sections.forEach(function (section) {
     distArray.push(section.offsetTop + section.offsetHeight - posNav);
   });
+  distArray.pop();
   var min = Math.min.apply(Math, _toConsumableArray(distArray.filter(function (num) {
     return num > 0;
   })));
@@ -11512,7 +11513,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58565" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58831" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
