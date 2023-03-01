@@ -79,7 +79,7 @@
 
 .quotes {
   &::before {
-    content: url("./../images/open-quote.png");
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQBAMAAAD6/3KbAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAA3Nzc3Nzc4eHh3d3d3Nzc3d3d3Nzc3Nzc3Nzc29vb3Nzc3Nzc3d3d2trafFftrgAAAA90Uk5TADPMEUTdqv+77lVmmXci3BHKaQAAAJVJREFUeJwlzjsOQVEUheF14x2PGMNVaHWGoJWbnGhNQUR+bkh0Wp1WJ0YgOp1Wp9WZhuWc6mt29r8kZXk+kFQtInVYmmaiAUczhqm5wN7c4GEO8DJDOEsVoJ8YSe1EFza+qMEqsU6/tuYLO/OG0jxhYWapeor0iPGMGO8Q457HXGoR4573j09S3PP4SNcQguP3EArpB29PODWrgKIcAAAAAElFTkSuQmCC');
     position: absolute;
     top: -20px;
     left: -20px;
@@ -91,7 +91,8 @@
   }
 
   &::after {
-    content: url("./../images/close-quote.png");
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQBAMAAAD6/3KbAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAA3Nzc3Nzc4eHh3d3d3Nzc3d3d3Nzc3Nzc3Nzc29vb3Nzc3Nzc3d3d2trafFftrgAAAA90Uk5TADPMEUTdqv+77lVmmXci3BHKaQAAAJVJREFUeJwlzjsOQVEUheF14x2PGMNVaHWGoJWbnGhNQUR+bkh0Wp1WJ0YgOp1Wp9WZhuWc6mt29r8kZXk+kFQtInVYmmaiAUczhqm5wN7c4GEO8DJDOEsVoJ8YSe1EFza+qMEqsU6/tuYLO/OG0jxhYWapeor0iPGMGO8Q457HXGoR4573j09S3PP4SNcQguP3EArpB29PODWrgKIcAAAAAElFTkSuQmCC');
+    rotate: 180deg;
     position: absolute;
     bottom: -20px;
     right: -20px;

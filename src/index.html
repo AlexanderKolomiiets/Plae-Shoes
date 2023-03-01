@@ -86,10 +86,8 @@
           </div>
           <picture>
             <source srcset="./images/webp/about.webp" type="image/webp">
-            <source srcset="./images/about.jpg" type="image/jpeg">
             <img
               src="./images/about.jpg"
-              alt="about image"
               loading="lazy"
               class="about__photo"
             >
@@ -100,10 +98,8 @@
         <div class="customers__content">
           <picture class="customers__photo">
             <source srcset="./images/webp/customers.webp" type="image/webp">
-            <source srcset="./images/customers.jpg" type="image/jpeg">
             <img
               src="./images/customers.jpg"
-              alt="customers image"
               loading="lazy"
               class="customers__photo"
             >
@@ -131,10 +127,8 @@
           </div>
           <picture class="customers__photo">
             <source srcset="./images/webp/customers_2.webp" type="image/webp">
-            <source srcset="./images/customers_2.jpg" type="image/jpeg">
             <img
               src="./images/customers_2.jpg"
-              alt="customers image"
               loading="lazy"
               class="customers__photo"
             >
@@ -149,11 +143,10 @@
           View the styles available now from select stockists
         </p>
         <div class="range__content">
-          <div class="swiper">
+          <div class="swiper" id="swiper-1">
             <div class="swiper-wrapper">
               <picture class="swiper-slide">
                 <source srcset="./images/shoes/webp/Ty_N_Steel.webp" type="image/webp">
-                <source srcset="./images/shoes/Ty_N_Steel.jpg" type="image/jpeg">
                 <img
                   src="./images/shoes/Ty_N_Steel.jpg"
                   alt="Ty N Steel"
@@ -163,7 +156,6 @@
               </picture>
               <picture class="swiper-slide">
                 <source srcset="./images/shoes/webp/Max_N_Steel_Camo.webp" type="image/webp">
-                <source srcset="./images/shoes/Max_N_Steel_Camo.jpg" type="image/jpeg">
                 <img
                   src="./images/shoes/Max_N_Steel_Camo.jpg"
                   alt="Max N Steel Camo"
@@ -173,7 +165,6 @@
               </picture>
               <picture class="swiper-slide">
                 <source srcset="./images/shoes/webp/Emme_S_Pink.webp" type="image/webp">
-                <source srcset="./images/shoes/Emme_S_Pink.jpg" type="image/jpeg">
                 <img
                   src="./images/shoes/Emme_S_Pink.jpg"
                   alt="Emme S Pink"
@@ -183,17 +174,14 @@
               </picture>
               <picture class="swiper-slide">
                 <source srcset="./images/shoes/webp/Camile_Navy_3Quarter.webp" type="image/webp">
-                <source srcset="./images/shoes/Camile_Navy_3Quarter.jpg" type="image/jpeg">
                 <img
                   src="./images/shoes/Camile_Navy_3Quarter.jpg"
                   alt="Camile Navy 3Quarter"
-                  loading="lazy"
                   class="swiper-slide"
                 >
               </picture>
               <picture class="swiper-slide">
                 <source srcset="./images/shoes/webp/Noel_Bracken.webp" type="image/webp">
-                <source srcset="./images/shoes/Noel_Bracken.jpg" type="image/jpeg">
                 <img
                   src="./images/shoes/Noel_Bracken.jpg"
                   alt="Noel Bracken"
@@ -203,7 +191,6 @@
               </picture>
               <picture class="swiper-slide">
                 <source srcset="./images/shoes/webp/Roan_L_White.webp" type="image/webp">
-                <source srcset="./images/shoes/Roan_L_White.jpg" type="image/jpeg">
                 <img
                   src="./images/shoes/Roan_L_White.jpg"
                   alt="Roan L White"
@@ -213,7 +200,6 @@
               </picture>
               <picture class="swiper-slide">
                 <source srcset="./images/shoes/webp/Nat_Navy.webp" type="image/webp">
-                <source srcset="./images/shoes/Nat_Navy.jpg" type="image/jpeg">
                 <img
                   src="./images/shoes/Nat_Navy.jpg"
                   alt="Nat Navy"
@@ -224,8 +210,8 @@
             </div>
             <div class="swiper__pagination"></div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev" id="swiper-button-prev-1"></div>
+          <div class="swiper-button-next" id="swiper-button-next-1"></div>
         </div>
       </section>
       <section class="features page__section" id="features">
@@ -271,6 +257,14 @@
                 </p>
               </li>
             </div>
+            <picture class="features__photo">
+              <source srcset="./images/webp/features.webp" type="image/webp">
+              <img
+                src="./images/features.png"
+                loading="lazy"
+                class="features__photo"
+              >
+            </picture>
             <div class="features__list__container features__list__container--2">
               <li class="features__item">
                 <p class="features__name">
@@ -686,6 +680,6 @@
         Copyright © 2015 Craftymothers ltd. All Rights Reserved
       </div>
     </footer>
-    <script src="./scripts/main.js"></script>
+    <script defer src="./scripts/main.js"></script>
   </body>
 </html>
