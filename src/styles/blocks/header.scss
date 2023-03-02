@@ -7,9 +7,16 @@
     height: 100vh;
     padding: 35px;
     padding-top: 20px;
-    background-image: url("./../images/header.jpg");
-    background-position: center;
-    background-size: cover;
+  }
+
+  &__photo {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__logo {

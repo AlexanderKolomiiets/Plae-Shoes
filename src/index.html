@@ -9,13 +9,24 @@
   <body class="page__body">
     <header class="header page__section" id="header">
       <div class="header__content">
-        <a href="#" class="header__logo">
+        <picture class="header__photo">
+          <source srcset="./images/webp/header.webp" type="image/webp">
           <img
-            src="./images/plae_logo.png"
-            alt="Plae logo"
+            src="./images/header.jpg"
             loading="lazy"
-            class="header__logo-image"
+            class="header__photo"
           >
+        </picture>
+        <a href="#" class="header__logo">
+          <picture class="header__photo">
+            <source srcset="./images/webp/plae_logo.webp" type="image/webp">
+            <img
+              src="./images/plae_logo.png"
+              alt="Plae logo"
+              loading="lazy"
+              class="header__logo-image"
+            >
+          </picture>
         </a>
         <div class="header__info">
           <h1 class="header__title">
@@ -84,7 +95,7 @@
               With every shoe, Plae sources responsible, recycled, and non-toxic materials, and makes sure manufacturing and labour is fair and child-free.
             </p>
           </div>
-          <picture>
+          <picture class="about__picture">
             <source srcset="./images/webp/about.webp" type="image/webp">
             <img
               src="./images/about.jpg"
@@ -96,7 +107,7 @@
       </section>
       <section class="customers page__section container" id="customers">
         <div class="customers__content">
-          <picture class="customers__photo">
+          <picture class="customers__picture">
             <source srcset="./images/webp/customers.webp" type="image/webp">
             <img
               src="./images/customers.jpg"
@@ -125,7 +136,7 @@
               Edie (age 6)
             </p>
           </div>
-          <picture class="customers__photo">
+          <picture class="customers__picture">
             <source srcset="./images/webp/customers_2.webp" type="image/webp">
             <img
               src="./images/customers_2.jpg"
@@ -177,6 +188,7 @@
                 <img
                   src="./images/shoes/Camile_Navy_3Quarter.jpg"
                   alt="Camile Navy 3Quarter"
+                  loading="lazy"
                   class="swiper-slide"
                 >
               </picture>

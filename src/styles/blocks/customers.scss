@@ -47,14 +47,28 @@
     margin: 0 auto;
     max-width: 70%;
 
+    @include onTablet {
+      max-width: 100%;
+    }
+  }
+
+  &__picture {
+    min-height: 400px;
+    
+    @include onTablet {
+      min-height: 600px;
+    }
+
+    @include onDesktop {
+      min-height: 800px;
+    }
+
     &:nth-child(1) {
       order: 1;
       margin-bottom: 30px;
     }
 
     @include onTablet {
-      max-width: 100%;
-
       &:nth-child(1) {
         order: 0;
         margin-bottom: 0;

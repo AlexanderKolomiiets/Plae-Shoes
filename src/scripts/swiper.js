@@ -8,7 +8,6 @@ new Swiper('#swiper-1', {
 
   grabCursor: true,
   rewind: true,
-
   pagination: {
     el: '.swiper__pagination',
     type: 'custom',

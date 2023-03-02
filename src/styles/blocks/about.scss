@@ -43,6 +43,18 @@
     }
   }
 
+  &__picture {
+    min-height: 400px;
+
+    @include onTablet {
+      min-height: 600px;
+    }
+
+    @include onDesktop {
+      min-height: 800px;
+    }
+  }
+
   &__info {
     padding: 30px 50px;
     margin: 0 auto;
