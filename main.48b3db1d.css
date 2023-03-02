@@ -149,7 +149,7 @@ p {
   .sign-up__input {
     width: 65%;
     height: inherit;
-    padding: 0 10px 0 15px;
+    padding: 0 40px 0 20px;
     font-family: "Yantramanav", sans-serif;
     font-size: 14px;
     font-weight: 300;
@@ -160,13 +160,13 @@ p {
     color: #8c8c8c; }
     @media (min-width: 768px) {
       .sign-up__input {
-        font-size: 18px;
-        padding: 0 107px 0 20px; } }
+        width: 300px;
+        font-size: 18px; } }
   .sign-up__button {
     display: flex;
     align-items: center;
     height: inherit;
-    padding: 0 23px 0 14px;
+    padding: 0 21px 0 13px;
     font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -231,9 +231,6 @@ p {
     .about__info {
       padding: 50px 18% 50px 17%; } }
 
-:root {
-  --quotes: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQBAMAAAD6/3KbAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAA3Nzc3Nzc4eHh3d3d3Nzc3d3d3Nzc3Nzc3Nzc29vb3Nzc3Nzc3d3d2trafFftrgAAAA90Uk5TADPMEUTdqv+77lVmmXci3BHKaQAAAJVJREFUeJwlzjsOQVEUheF14x2PGMNVaHWGoJWbnGhNQUR+bkh0Wp1WJ0YgOp1Wp9WZhuWc6mt29r8kZXk+kFQtInVYmmaiAUczhqm5wN7c4GEO8DJDOEsVoJ8YSe1EFza+qMEqsU6/tuYLO/OG0jxhYWapeor0iPGMGO8Q457HXGoR4573j09S3PP4SNcQguP3EArpB29PODWrgKIcAAAAAElFTkSuQmCC"); }
-
 .customers__content {
   display: flex;
   flex-direction: column; }
@@ -292,7 +289,7 @@ p {
       padding: 33% 25% 18%; } }
 
 .quotes::before, .quotes::after {
-  content: var(--quotes); }
+  content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQBAMAAAD6/3KbAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAA3Nzc3Nzc4eHh3d3d3Nzc3d3d3Nzc3Nzc3Nzc29vb3Nzc3Nzc3d3d2trafFftrgAAAA90Uk5TADPMEUTdqv+77lVmmXci3BHKaQAAAJVJREFUeJwlzjsOQVEUheF14x2PGMNVaHWGoJWbnGhNQUR+bkh0Wp1WJ0YgOp1Wp9WZhuWc6mt29r8kZXk+kFQtInVYmmaiAUczhqm5wN7c4GEO8DJDOEsVoJ8YSe1EFza+qMEqsU6/tuYLO/OG0jxhYWapeor0iPGMGO8Q457HXGoR4573j09S3PP4SNcQguP3EArpB29PODWrgKIcAAAAAElFTkSuQmCC"); }
 
 .quotes::before {
   position: absolute;
@@ -676,13 +673,6 @@ swiper-slide {
 
 .footer__subtitle {
   margin: 0 auto 48px; }
-
-@media (min-width: 768px) {
-  .footer__sign-up {
-    margin-left: 30px; }
-    .footer__sign-up__input {
-      padding-left: 40px;
-      padding-right: 80px; } }
 
 .footer__copyright {
   width: 100%;
