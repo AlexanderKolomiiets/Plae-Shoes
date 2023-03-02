@@ -45,22 +45,16 @@
   &__photo {
     display: flex;
     margin: 0 auto;
-    max-width: 70%;
-
-    @include onTablet {
-      max-width: 100%;
-    }
+    max-width: 100%;
   }
 
   &__picture {
-    min-height: 400px;
-    
-    @include onTablet {
-      min-height: 600px;
-    }
+    min-height: calc(350px * 1.25);
+    height: calc(100vw * 1.25);
+    max-height: calc(1280px / 2 * 1.25);
 
-    @include onDesktop {
-      min-height: 800px;
+    @include onTablet {
+      height: calc(50vw * 1.25);
     }
 
     &:nth-child(1) {
@@ -93,7 +87,7 @@
 
 .quotes {
   &::before {
-    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQBAMAAAD6/3KbAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAA3Nzc3Nzc4eHh3d3d3Nzc3d3d3Nzc3Nzc3Nzc29vb3Nzc3Nzc3d3d2trafFftrgAAAA90Uk5TADPMEUTdqv+77lVmmXci3BHKaQAAAJVJREFUeJwlzjsOQVEUheF14x2PGMNVaHWGoJWbnGhNQUR+bkh0Wp1WJ0YgOp1Wp9WZhuWc6mt29r8kZXk+kFQtInVYmmaiAUczhqm5wN7c4GEO8DJDOEsVoJ8YSe1EFza+qMEqsU6/tuYLO/OG0jxhYWapeor0iPGMGO8Q457HXGoR4573j09S3PP4SNcQguP3EArpB29PODWrgKIcAAAAAElFTkSuQmCC");
+    content: url($quotes);
     position: absolute;
     top: -20px;
     left: -20px;
@@ -105,7 +99,7 @@
   }
 
   &::after {
-    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQBAMAAAD6/3KbAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAA3Nzc3Nzc4eHh3d3d3Nzc3d3d3Nzc3Nzc3Nzc29vb3Nzc3Nzc3d3d2trafFftrgAAAA90Uk5TADPMEUTdqv+77lVmmXci3BHKaQAAAJVJREFUeJwlzjsOQVEUheF14x2PGMNVaHWGoJWbnGhNQUR+bkh0Wp1WJ0YgOp1Wp9WZhuWc6mt29r8kZXk+kFQtInVYmmaiAUczhqm5wN7c4GEO8DJDOEsVoJ8YSe1EFza+qMEqsU6/tuYLO/OG0jxhYWapeor0iPGMGO8Q457HXGoR4573j09S3PP4SNcQguP3EArpB29PODWrgKIcAAAAAElFTkSuQmCC");
+    content: url($quotes);
     rotate: 180deg;
     position: absolute;
     bottom: -20px;

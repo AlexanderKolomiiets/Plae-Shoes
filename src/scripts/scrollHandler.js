@@ -5,7 +5,7 @@ const scrollHandler = () => {
   const distArray = [];
 
   sections.forEach(section => {
-    distArray.push(section.offsetTop + section.offsetHeight - posNav - 50);
+    distArray.push(section.offsetTop + section.offsetHeight - posNav - 70);
   });
 
   distArray.pop();

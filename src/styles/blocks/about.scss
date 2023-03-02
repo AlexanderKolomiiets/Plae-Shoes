@@ -37,21 +37,16 @@
   &__photo {
     display: flex;
     margin: 0 auto;
-    max-width: 80%;
-    @include onTablet {
-      max-width: 100%;
-    }
+    max-width: 100%;
   }
 
   &__picture {
-    min-height: 400px;
+    min-height: calc(320px * 1.25);
+    height: calc(100vw * 1.25);
+    max-height: calc(1280px / 2 * 1.25);
 
     @include onTablet {
-      min-height: 600px;
-    }
-
-    @include onDesktop {
-      min-height: 800px;
+      height: calc(50vw * 1.25);
     }
   }
 
