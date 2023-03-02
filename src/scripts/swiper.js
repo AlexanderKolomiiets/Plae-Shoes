@@ -1,24 +1,22 @@
 import Swiper, { Pagination, Navigation } from 'swiper';
 
-const swipers = document.querySelectorAll('.swiper');
-const swiperPagination = document.querySelectorAll('.swiper__pagination');
-const swipeNext = document.querySelectorAll('.swiper-button-next');
-const swipePrev = document.querySelectorAll('.swiper-button-prev');
-const slides = document.querySelectorAll('.swiper-slide[data-shoe]');
-const titles = [];
+const swipersContent = document.querySelectorAll('.swiper-content');
 
-slides.forEach(slide => {
-  titles.push(slide.dataset.shoe);
-});
+swipersContent.forEach(swiperContent => {
+  const swiper = swiperContent.querySelector('.swiper');
+  const slides = swiper.querySelectorAll('.swiper-slide[data-shoe]');
+  const titles = [];
 
-swipers.forEach((swiper, i) => {
+  slides.forEach(slide => {
+    titles.push(slide.dataset.shoe);
+  });
+
   new Swiper(swiper, {
     modules: [Pagination, Navigation],
-
     grabCursor: true,
     rewind: true,
     pagination: {
-      el: swiperPagination[i],
+      el: swiper.querySelector('.swiper__pagination'),
       type: 'custom',
       renderCustom: function(_, current, total) {
         return `<h2 class="swiper__title">${titles[current - 1]}</h2>
@@ -27,8 +25,8 @@ swipers.forEach((swiper, i) => {
     },
 
     navigation: {
-      nextEl: swipeNext[i],
-      prevEl: swipePrev[i],
+      nextEl: swiperContent.querySelector('.swiper-button-next'),
+      prevEl: swiperContent.querySelector('.swiper-button-prev'),
     },
   });
 });

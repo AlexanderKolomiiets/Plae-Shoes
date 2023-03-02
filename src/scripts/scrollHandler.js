@@ -1,12 +1,20 @@
-window.addEventListener('scroll', function() {
-  const sections = document.querySelectorAll('.page__section');
-  const navLinks = document.querySelectorAll('.nav__link');
+const sections = document.querySelectorAll('.page__section');
+const navLinks = document.querySelectorAll('.nav__link');
+
+// const sectionOffsets = [];
+
+// sections.forEach((section) => {
+//   sectionOffsets.push(section.offsetTop);
+// });
+
+window.addEventListener('scroll', () => {
+  const { scrollY } = window;
 
   sections.forEach((section, i) => {
     const sectionInView
-      = window.scrollY >= section.offsetTop - window.innerHeight / 2;
+      = scrollY >= section.offsetTop - window.innerHeight / 2;
     const sectionOutOfView
-      = window.scrollY >= section.offsetTop + section.offsetHeight;
+      = scrollY >= section.offsetTop + section.offsetHeight;
 
     if (sectionInView && !sectionOutOfView) {
       navLinks.forEach((navLink) => {
