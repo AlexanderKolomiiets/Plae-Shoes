@@ -1,24 +1,34 @@
-import { readFileSync } from 'fs';
 import Swiper, { Pagination, Navigation } from 'swiper';
 
-const titles = readFileSync('./src/scripts/shoes.txt', 'utf-8').split('\n');
+const swipers = document.querySelectorAll('.swiper');
+const swiperPagination = document.querySelectorAll('.swiper__pagination');
+const swipeNext = document.querySelectorAll('.swiper-button-next');
+const swipePrev = document.querySelectorAll('.swiper-button-prev');
+const slides = document.querySelectorAll('.swiper-slide[data-shoe]');
+const titles = [];
 
-new Swiper('#swiper-1', {
-  modules: [Pagination, Navigation],
+slides.forEach(slide => {
+  titles.push(slide.dataset.shoe);
+});
 
-  grabCursor: true,
-  rewind: true,
-  pagination: {
-    el: '.swiper__pagination',
-    type: 'custom',
-    renderCustom: function(_, current, total) {
-      return `<h2 class="swiper__title">${titles[current - 1]}</h2>
-      <span>${current}</span>  /  <span>${total}</span>`;
+swipers.forEach((swiper, i) => {
+  new Swiper(swiper, {
+    modules: [Pagination, Navigation],
+
+    grabCursor: true,
+    rewind: true,
+    pagination: {
+      el: swiperPagination[i],
+      type: 'custom',
+      renderCustom: function(_, current, total) {
+        return `<h2 class="swiper__title">${titles[current - 1]}</h2>
+        <span>${current}</span>  /  <span>${total}</span>`;
+      },
     },
-  },
 
-  navigation: {
-    nextEl: '#swiper-button-next-1',
-    prevEl: '#swiper-button-prev-1',
-  },
+    navigation: {
+      nextEl: swipeNext[i],
+      prevEl: swipePrev[i],
+    },
+  });
 });

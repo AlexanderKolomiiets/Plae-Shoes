@@ -1,26 +1,18 @@
-const scrollHandler = () => {
-  const nav = document.querySelector('.nav');
-  const posNav = window.pageYOffset + nav.offsetTop;
+window.addEventListener('scroll', function() {
   const sections = document.querySelectorAll('.page__section');
-  const distArray = [];
+  const navLinks = document.querySelectorAll('.nav__link');
 
-  sections.forEach(section => {
-    distArray.push(section.offsetTop + section.offsetHeight - posNav - 70);
-  });
+  sections.forEach((section, i) => {
+    const sectionInView
+      = window.scrollY >= section.offsetTop - window.innerHeight / 2;
+    const sectionOutOfView
+      = window.scrollY >= section.offsetTop + section.offsetHeight;
 
-  distArray.pop();
-
-  const min = Math.min(...distArray.filter(num => num > 0));
-
-  document.querySelectorAll('.nav__link')
-    .forEach(link => link.classList.remove('nav__link--is-active'));
-
-  distArray.forEach((item, i) => {
-    if (min === item) {
-      document.querySelectorAll('.nav__link')[i]
-        .classList.add('nav__link--is-active');
+    if (sectionInView && !sectionOutOfView) {
+      navLinks.forEach((navLink) => {
+        navLink.classList.remove('nav__link--is-active');
+      });
+      navLinks[i].classList.add('nav__link--is-active');
     }
   });
-};
-
-window.addEventListener('scroll', scrollHandler);
+});

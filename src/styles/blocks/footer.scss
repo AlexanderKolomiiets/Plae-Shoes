@@ -21,18 +21,6 @@
     margin: 0 auto 48px;
   }
 
-  &__sign-up {
-    @include onTablet {
-      margin-left: 30px;
-
-      &__input {
-        padding-left: 40px;
-        padding-right: 80px;
-
-      }
-    }
-  }
-
   &__copyright {
     width: 100%;
     padding: 10px 0 10px 36px;

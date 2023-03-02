@@ -11,7 +11,7 @@
   &__input {
     width: 65%;
     height: inherit;
-    padding: 0 10px 0 15px;
+    padding: 0 40px 0 20px;
     font-family: "Yantramanav", sans-serif;
     font-size: 14px;
     font-weight: 300;
@@ -22,8 +22,8 @@
     color: #8c8c8c;
 
     @include onTablet {
+      width: 300px;
       font-size: 18px;
-      padding: 0 107px 0 20px;
     }
   }
 
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     height: inherit;
-    padding: 0 23px 0 14px;
+    padding: 0 21px 0 13px;
     font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-weight: 400;

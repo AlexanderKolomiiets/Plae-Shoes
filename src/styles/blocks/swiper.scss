@@ -30,7 +30,7 @@ swiper-container {
   display: flex;
   align-items: center;
   box-sizing: content-box;
-  
+
   @include onTablet {
     max-width: 465px;
     min-height: 465px;
