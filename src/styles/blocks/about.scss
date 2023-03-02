@@ -41,13 +41,8 @@
   }
 
   &__picture {
-    min-height: calc(320px * 1.25);
-    height: calc(100vw * 1.25);
-    max-height: calc(1280px / 2 * 1.25);
-
-    @include onTablet {
-      height: calc(50vw * 1.25);
-    }
+    padding: 0 0 125%;
+    height: 0;
   }
 
   &__info {
