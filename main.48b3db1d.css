@@ -54,11 +54,9 @@ p {
 * {
   box-sizing: border-box; }
 
-body {
-  overflow-x: hidden; }
-
 .page {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  min-width: 320px; }
   .page__body {
     margin: 0;
     padding: 0; }
@@ -74,10 +72,16 @@ body {
   min-height: 500px;
   height: 100vh;
   padding: 35px;
-  padding-top: 20px;
-  background-image: url("/header.3dc29cd7.jpg");
-  background-position: center;
-  background-size: cover; }
+  padding-top: 20px; }
+
+.header__photo {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
 
 .header__logo {
   display: flex;
@@ -216,6 +220,15 @@ body {
     .about__photo {
       max-width: 100%; } }
 
+.about__picture {
+  min-height: 400px; }
+  @media (min-width: 768px) {
+    .about__picture {
+      min-height: 600px; } }
+  @media (min-width: 1280px) {
+    .about__picture {
+      min-height: 800px; } }
+
 .about__info {
   padding: 30px 50px;
   margin: 0 auto; }
@@ -262,15 +275,25 @@ body {
   display: flex;
   margin: 0 auto;
   max-width: 70%; }
-  .customers__photo:nth-child(1) {
+  @media (min-width: 768px) {
+    .customers__photo {
+      max-width: 100%; } }
+
+.customers__picture {
+  min-height: 400px; }
+  @media (min-width: 768px) {
+    .customers__picture {
+      min-height: 600px; } }
+  @media (min-width: 1280px) {
+    .customers__picture {
+      min-height: 800px; } }
+  .customers__picture:nth-child(1) {
     order: 1;
     margin-bottom: 30px; }
   @media (min-width: 768px) {
-    .customers__photo {
-      max-width: 100%; }
-      .customers__photo:nth-child(1) {
-        order: 0;
-        margin-bottom: 0; } }
+    .customers__picture:nth-child(1) {
+      order: 0;
+      margin-bottom: 0; } }
 
 .customers__info {
   padding: 30px 40px; }
@@ -324,7 +347,6 @@ body {
 
 .swiper,
 swiper-container {
-  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -333,19 +355,19 @@ swiper-container {
   padding: 0;
   z-index: 1;
   display: block; }
-  @media (min-width: 768px) {
-    .swiper,
-    swiper-container {
-      max-width: 465px; } }
 
 .swiper-wrapper {
+  max-width: 300px;
+  min-height: 300px;
   position: relative;
-  width: 100%;
-  height: 100%;
   z-index: 1;
   display: flex;
   align-items: center;
   box-sizing: content-box; }
+  @media (min-width: 768px) {
+    .swiper-wrapper {
+      max-width: 465px;
+      min-height: 465px; } }
 
 .swiper-slide,
 swiper-slide {
