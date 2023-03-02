@@ -11412,30 +11412,28 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var swipers = document.querySelectorAll('.swiper');
-var swiperPagination = document.querySelectorAll('.swiper__pagination');
-var swipeNext = document.querySelectorAll('.swiper-button-next');
-var swipePrev = document.querySelectorAll('.swiper-button-prev');
-var slides = document.querySelectorAll('.swiper-slide[data-shoe]');
-var titles = [];
-slides.forEach(function (slide) {
-  titles.push(slide.dataset.shoe);
-});
-swipers.forEach(function (swiper, i) {
+var swipersContent = document.querySelectorAll('.swiper-content');
+swipersContent.forEach(function (swiperContent) {
+  var swiper = swiperContent.querySelector('.swiper');
+  var slides = swiper.querySelectorAll('.swiper-slide[data-shoe]');
+  var titles = [];
+  slides.forEach(function (slide) {
+    titles.push(slide.dataset.shoe);
+  });
   new _swiper.default(swiper, {
     modules: [_swiper.Pagination, _swiper.Navigation],
     grabCursor: true,
     rewind: true,
     pagination: {
-      el: swiperPagination[i],
+      el: swiper.querySelector('.swiper__pagination'),
       type: 'custom',
       renderCustom: function renderCustom(_, current, total) {
         return "<h2 class=\"swiper__title\">".concat(titles[current - 1], "</h2>\n        <span>").concat(current, "</span>  /  <span>").concat(total, "</span>");
       }
     },
     navigation: {
-      nextEl: swipeNext[i],
-      prevEl: swipePrev[i]
+      nextEl: swiperContent.querySelector('.swiper-button-next'),
+      prevEl: swiperContent.querySelector('.swiper-button-prev')
     }
   });
 });
@@ -11448,12 +11446,18 @@ forms.forEach(function (form) {
   });
 });
 },{}],"scripts/scrollHandler.js":[function(require,module,exports) {
+var sections = document.querySelectorAll('.page__section');
+var navLinks = document.querySelectorAll('.nav__link'); // const sectionOffsets = [];
+// sections.forEach((section) => {
+//   sectionOffsets.push(section.offsetTop);
+// });
+
 window.addEventListener('scroll', function () {
-  var sections = document.querySelectorAll('.page__section');
-  var navLinks = document.querySelectorAll('.nav__link');
+  var _window = window,
+      scrollY = _window.scrollY;
   sections.forEach(function (section, i) {
-    var sectionInView = window.scrollY >= section.offsetTop - window.innerHeight / 2;
-    var sectionOutOfView = window.scrollY >= section.offsetTop + section.offsetHeight;
+    var sectionInView = scrollY >= section.offsetTop - window.innerHeight / 2;
+    var sectionOutOfView = scrollY >= section.offsetTop + section.offsetHeight;
 
     if (sectionInView && !sectionOutOfView) {
       navLinks.forEach(function (navLink) {
@@ -11499,7 +11503,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61709" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51750" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
