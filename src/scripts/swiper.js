@@ -4,12 +4,6 @@ const swipersContent = document.querySelectorAll('.swiper-content');
 
 swipersContent.forEach(swiperContent => {
   const swiper = swiperContent.querySelector('.swiper');
-  const slides = swiper.querySelectorAll('.swiper-slide[data-shoe]');
-  const titles = [];
-
-  slides.forEach(slide => {
-    titles.push(slide.dataset.shoe);
-  });
 
   new Swiper(swiper, {
     modules: [Pagination, Navigation],
@@ -19,11 +13,16 @@ swipersContent.forEach(swiperContent => {
       el: swiper.querySelector('.swiper__pagination'),
       type: 'custom',
       renderCustom: function(_, current, total) {
-        return `<h2 class="swiper__title">${titles[current - 1]}</h2>
+        let title = '';
+
+        if (current > 0) {
+          title = _.slides[current - 1].getAttribute('data-shoe');
+        }
+
+        return `<h2 class="swiper__title">${title}</h2>
         <span>${current}</span>  /  <span>${total}</span>`;
       },
     },
-
     navigation: {
       nextEl: swiperContent.querySelector('.swiper-button-next'),
       prevEl: swiperContent.querySelector('.swiper-button-prev'),
