@@ -1,20 +1,31 @@
 const sections = document.querySelectorAll('.page__section');
 const navLinks = document.querySelectorAll('.nav__link');
+let sectionData = [];
 
-// const sectionOffsets = [];
+function updateSectionData() {
+  sectionData = [];
 
-// sections.forEach((section) => {
-//   sectionOffsets.push(section.offsetTop);
-// });
+  sections.forEach((section) => {
+    const { offsetTop, offsetHeight } = section;
+
+    sectionData.push({
+      offsetTop,
+      offsetHeight,
+    });
+  });
+}
+
+updateSectionData();
+
+window.addEventListener('resize', updateSectionData);
 
 window.addEventListener('scroll', () => {
   const { scrollY } = window;
 
-  sections.forEach((section, i) => {
-    const sectionInView
-      = scrollY >= section.offsetTop - window.innerHeight / 2;
-    const sectionOutOfView
-      = scrollY >= section.offsetTop + section.offsetHeight;
+  sectionData.forEach((data, i) => {
+    const { offsetTop, offsetHeight } = data;
+    const sectionInView = scrollY >= offsetTop - window.innerHeight / 2;
+    const sectionOutOfView = scrollY >= offsetTop + offsetHeight;
 
     if (sectionInView && !sectionOutOfView) {
       navLinks.forEach((navLink) => {
