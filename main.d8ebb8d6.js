@@ -11415,11 +11415,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var swipersContent = document.querySelectorAll('.swiper-content');
 swipersContent.forEach(function (swiperContent) {
   var swiper = swiperContent.querySelector('.swiper');
-  var slides = swiper.querySelectorAll('.swiper-slide[data-shoe]');
-  var titles = [];
-  slides.forEach(function (slide) {
-    titles.push(slide.dataset.shoe);
-  });
   new _swiper.default(swiper, {
     modules: [_swiper.Pagination, _swiper.Navigation],
     grabCursor: true,
@@ -11428,7 +11423,13 @@ swipersContent.forEach(function (swiperContent) {
       el: swiper.querySelector('.swiper__pagination'),
       type: 'custom',
       renderCustom: function renderCustom(_, current, total) {
-        return "<h2 class=\"swiper__title\">".concat(titles[current - 1], "</h2>\n        <span>").concat(current, "</span>  /  <span>").concat(total, "</span>");
+        var title = '';
+
+        if (current > 0) {
+          title = _.slides[current - 1].getAttribute('data-shoe');
+        }
+
+        return "<h2 class=\"swiper__title\">".concat(title, "</h2>\n        <span>").concat(current, "</span>  /  <span>").concat(total, "</span>");
       }
     },
     navigation: {
@@ -11449,9 +11450,13 @@ forms.forEach(function (form) {
 var sections = document.querySelectorAll('.page__section');
 var navLinks = document.querySelectorAll('.nav__link');
 var sectionData = [];
+var windowInnerHeight;
+var timeoutTimer;
+var activeSectionIndex = -1;
 
 function updateSectionData() {
   sectionData = [];
+  windowInnerHeight = window.innerHeight;
   sections.forEach(function (section) {
     var offsetTop = section.offsetTop,
         offsetHeight = section.offsetHeight;
@@ -11463,24 +11468,41 @@ function updateSectionData() {
 }
 
 updateSectionData();
-window.addEventListener('resize', updateSectionData);
-window.addEventListener('scroll', function () {
+window.addEventListener('resize', function () {
+  clearTimeout(timeoutTimer);
+  timeoutTimer = setTimeout(updateSectionData, 250);
+});
+
+function updateScroll() {
   var _window = window,
       scrollY = _window.scrollY;
+  var newActiveSectionIndex = -1;
   sectionData.forEach(function (data, i) {
     var offsetTop = data.offsetTop,
         offsetHeight = data.offsetHeight;
-    var sectionInView = scrollY >= offsetTop - window.innerHeight / 2;
+    var sectionInView = scrollY >= offsetTop - windowInnerHeight / 2;
     var sectionOutOfView = scrollY >= offsetTop + offsetHeight;
 
     if (sectionInView && !sectionOutOfView) {
-      navLinks.forEach(function (navLink) {
-        navLink.classList.remove('nav__link--is-active');
-      });
-      navLinks[i].classList.add('nav__link--is-active');
+      newActiveSectionIndex = i;
     }
   });
-});
+
+  if (newActiveSectionIndex !== activeSectionIndex) {
+    if (activeSectionIndex !== -1) {
+      navLinks[activeSectionIndex].classList.remove('nav__link--is-active');
+    }
+
+    if (newActiveSectionIndex !== -1) {
+      navLinks[newActiveSectionIndex].classList.add('nav__link--is-active');
+    }
+
+    activeSectionIndex = newActiveSectionIndex;
+  }
+}
+
+updateScroll();
+window.addEventListener('scroll', updateScroll);
 },{}],"scripts/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -11517,7 +11539,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53985" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59519" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
