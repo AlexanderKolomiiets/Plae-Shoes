@@ -11447,17 +11447,31 @@ forms.forEach(function (form) {
 });
 },{}],"scripts/scrollHandler.js":[function(require,module,exports) {
 var sections = document.querySelectorAll('.page__section');
-var navLinks = document.querySelectorAll('.nav__link'); // const sectionOffsets = [];
-// sections.forEach((section) => {
-//   sectionOffsets.push(section.offsetTop);
-// });
+var navLinks = document.querySelectorAll('.nav__link');
+var sectionData = [];
 
+function updateSectionData() {
+  sectionData = [];
+  sections.forEach(function (section) {
+    var offsetTop = section.offsetTop,
+        offsetHeight = section.offsetHeight;
+    sectionData.push({
+      offsetTop: offsetTop,
+      offsetHeight: offsetHeight
+    });
+  });
+}
+
+updateSectionData();
+window.addEventListener('resize', updateSectionData);
 window.addEventListener('scroll', function () {
   var _window = window,
       scrollY = _window.scrollY;
-  sections.forEach(function (section, i) {
-    var sectionInView = scrollY >= section.offsetTop - window.innerHeight / 2;
-    var sectionOutOfView = scrollY >= section.offsetTop + section.offsetHeight;
+  sectionData.forEach(function (data, i) {
+    var offsetTop = data.offsetTop,
+        offsetHeight = data.offsetHeight;
+    var sectionInView = scrollY >= offsetTop - window.innerHeight / 2;
+    var sectionOutOfView = scrollY >= offsetTop + offsetHeight;
 
     if (sectionInView && !sectionOutOfView) {
       navLinks.forEach(function (navLink) {
@@ -11503,7 +11517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51750" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53985" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
